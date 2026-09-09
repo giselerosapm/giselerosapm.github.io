@@ -190,8 +190,8 @@
   "case.venc.resultado.titulo": "Solved alone, three times out of four.",
   "case.venc.res1.l": "self-service retention, now settled",
   "case.venc.res1.n": "Retention = the customer completes the change without falling through to a human. In the first weeks it was above 80%, and the level held once the novelty effect passed.",
-  "case.venc.res2.l": "of support contacts were about billing",
-  "case.venc.res2.n": "The size of the theme the self-service went after, measured before the flow was designed.",
+  "case.venc.res2.l": "CSAT on the flow, above the support average at the time",
+  "case.venc.res2.n": "Measured in the rating the assistant itself asks for when it closes the conversation.",
   "case.venc.res3.l": "between defining the scope, development, testing and deploy",
   "case.venc.resultado.fecho1": "Three out of four requests solved with no human support beat the target we had set, which was 50%. Customers who entered the flow landed in the right place and could use the tool in every scenario we had mapped.",
   "case.venc.resultado.fecho2": "From there, other self-service features for managing the subscription entered the roadmap, on the same logic of solving things before the contact happens.",
@@ -262,7 +262,6 @@
   "case.venc.cap.simulacao": "The simulation with the pro-rata amount and the date of the next payment, before confirming.",
   "case.venc.img.sucesso": "Choosing the card, charging the pro-rata amount and confirming the change",
   "case.venc.cap.sucesso": "Paying the difference happens inside the flow, and the confirmation closes it with no handover.",
-  "case.cj.discovery.metodo2": "The first step was the end-to-end journey diagnosis, which became a ranking of friction by volume and criticality and led to the thematic studies, the double clicks on each theme.",
   "case.cj.img.impacto": "Three impact fronts of the area: revenue growth, continuous innovation and internal efficiency",
   "case.cj.cap.impacto": "And why the area exists at all, translated into revenue, innovation and the teams' efficiency.",
   "case.cj.img.pistas": "Table of the leads found per stage of the journey, with the study, its status and the partner areas",
@@ -273,5 +272,7 @@
   "case.cj.cap.frentes": "The ten fronts ordered by impact, each with the data that justifies it and the area that takes it on. This is what turns a diagnosis into a product queue.",
   "case.cj.big1.l": "of support contacts were about billing",
   "case.cj.big2.l": "of account blocks came from a failed payment",
-  "case.cj.big3.l": "of cleanliness complaints came from the previous customer's use"
+  "case.cj.big3.l": "of cleanliness complaints came from the previous customer's use",
+  "case.cj.img.indicadores": "Curves showing how the area's two indicators moved through 2026, with the values omitted",
+  "case.cj.cap.indicadores": "The monthly tracking of both metrics against target, with the values omitted here. The shape of the curve is what matters: the fall is consistent, not one good month."
 }
