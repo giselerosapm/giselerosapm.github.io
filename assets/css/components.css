@@ -21,6 +21,12 @@
   flex: none;
 }
 .eyebrow--plain::before { display: none; }
+/* No mobile o traço aperta o texto contra a margem e não ajuda em nada:
+   o eyebrow já se distingue pelo caixa alta e pelo espacejamento. */
+@media (max-width: 640px) {
+  .eyebrow::before { display: none; }
+  .eyebrow { gap: 0; }
+}
 
 /* ---------- Display ---------- */
 .display {

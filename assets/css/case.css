@@ -242,6 +242,8 @@
 .section--result .stat__label,
 .section--result .stat__note { max-width: none; }
 .section--result .stat__label { font-size: var(--t-small); }
+/* Quando o número é uma palavra, ele fica largo e cola no vizinho. */
+.section--result .stats { gap: var(--s-6) var(--s-7); }
 
 .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-5); }
 
