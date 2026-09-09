@@ -1,0 +1,31 @@
+<svg class="illo" viewBox="0 0 400 280" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Do MVP à versão consolidada</title>
+  <g transform="translate(-5.8 -22.5) scale(1.029)">
+  <path class="illo__draw" pathLength="1" d="M81.8 196.5 L96.5 205.0 L96.5 222.0 L81.8 213.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:120ms"/>
+    <path class="illo__draw" pathLength="1" d="M111.2 196.5 L96.5 205.0 L96.5 222.0 L111.2 213.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:180ms"/>
+    <path class="illo__draw" pathLength="1" d="M96.5 188.0 L111.2 196.5 L96.5 205.0 L81.8 196.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:0ms"/>
+    <path class="illo__guide" d="M96.5 188.0 L96.5 205.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:360ms"/>
+    <path class="illo__guide" d="M96.5 205.0 L111.2 213.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:360ms"/>
+    <path class="illo__guide" d="M96.5 205.0 L81.8 213.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:360ms"/>
+    <path class="illo__draw" pathLength="1" d="M141.1 171.0 L170.5 188.0 L170.5 222.0 L141.1 205.0 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:270ms"/>
+    <path class="illo__draw" pathLength="1" d="M199.9 171.0 L170.5 188.0 L170.5 222.0 L199.9 205.0 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:330ms"/>
+    <path class="illo__draw" pathLength="1" d="M170.5 154.0 L199.9 171.0 L170.5 188.0 L141.1 171.0 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:150ms"/>
+    <path class="illo__guide" d="M185.2 162.5 L155.8 179.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:470ms"/>
+    <path class="illo__guide" d="M155.8 162.5 L185.2 179.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:470ms"/>
+    <path class="illo__guide" d="M170.5 154.0 L170.5 188.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:510ms"/>
+    <path class="illo__guide" d="M170.5 188.0 L199.9 205.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:510ms"/>
+    <path class="illo__guide" d="M170.5 188.0 L141.1 205.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:510ms"/>
+    <path class="illo__fill" d="M274.0 120.0 L318.2 145.5 L274.0 171.0 L229.8 145.5 Z" fill="var(--illo-accent-2)" style="--d:720ms"/>
+    <path class="illo__draw" pathLength="1" d="M229.8 145.5 L274.0 171.0 L274.0 222.0 L229.8 196.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:420ms"/>
+    <path class="illo__draw" pathLength="1" d="M318.2 145.5 L274.0 171.0 L274.0 222.0 L318.2 196.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:480ms"/>
+    <path class="illo__draw" pathLength="1" d="M274.0 120.0 L318.2 145.5 L274.0 171.0 L229.8 145.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:300ms"/>
+    <path class="illo__guide" d="M274.0 120.0 L274.0 171.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:660ms"/>
+    <path class="illo__guide" d="M274.0 171.0 L318.2 196.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:660ms"/>
+    <path class="illo__guide" d="M274.0 171.0 L229.8 196.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:660ms"/>
+    <path class="illo__guide" d="M274.0 92.8 L318.2 118.3 L274.0 143.8 L229.8 118.3 Z" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="3.9 4.9" style="--d:720ms"/>
+    <path class="illo__guide" d="M229.8 118.3 L274.0 143.8 L274.0 171.0 L229.8 145.5 Z" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="3.9 4.9" style="--d:720ms"/>
+    <path class="illo__guide" d="M318.2 118.3 L274.0 143.8 L274.0 171.0 L318.2 145.5 Z" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="3.9 4.9" style="--d:720ms"/>
+    <path class="illo__guide" d="M28.0 223.0 L372.0 223.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="1.9 5.8" style="--d:60ms"/>
+    <circle class="illo__dot" cx="96.5" cy="196.5" r="4.37" fill="var(--illo-accent)" style="--d:560ms"/>
+  </g>
+</svg>

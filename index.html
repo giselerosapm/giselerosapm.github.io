@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#FBFAF7">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+
+<title>Gisele Rosa · Product Manager Sênior</title>
+<meta name="description" content="Oi, eu sou a Gi. Product Manager Sênior, designer de origem. Cases de assinatura flexível, Customer Journey e autosserviço na Turbi.">
+<meta name="author" content="Gisele Rosa">
+<link rel="icon" href="favicon.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://giselerosapm.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Gisele Rosa · Product Manager Sênior">
+<meta property="og:description" content="Portfólio de produto · Product Manager Sênior">
+<meta property="og:image" content="https://giselerosapm.github.io/assets/img/og-image.png">
+<meta property="og:url" content="https://giselerosapm.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Fallback tipográfico enquanto Ginger e Open Sauce não estão em assets/fonts/ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="geral.pular">Pular para o conteúdo</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__brand" href="index.html">Gisele Rosa</a>
+    <nav class="header__nav" aria-label="Principal">
+      <a class="is-optional" href="#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a href="#cases" data-i18n="nav.cases">Cases</a>
+      <a href="#contato" data-i18n="nav.contato">Contato</a>
+      <span class="lang" role="group" aria-label="Idioma">
+        <button class="lang__btn is-active" data-lang="pt" aria-pressed="true">PT</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 01 · HERO ------------------------------------------------ -->
+  <section class="section section--light section--full">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="home.hero.eyebrow">Product Manager Sênior · Especialista de produtos digitais</p>
+      <h1 class="display hero-title reveal">
+        <span data-i18n="home.hero.titulo">Oi, eu sou a Gi.</span>
+        <img class="dot-illo" src="assets/img/ilustra-gi.webp" width="440" height="440" fetchpriority="high" decoding="async"
+             alt="Ilustração da Gi" data-i18n-attr="alt:home.hero.ilustra">
+      </h1>
+      <p class="lead reveal" style="margin-top: var(--s-5)" data-i18n="home.hero.lead" data-i18n-html>
+        Sou designer, produteira e mãe.<br>
+        Me tornei boa em descobrir e resolver problemas por conta dessas 3 coisas.
+      </p>
+      <p class="reveal" style="margin-top: var(--s-6)">
+        <a class="arrow-link" href="#cases">
+          <span data-i18n="home.hero.cta">Ver os cases</span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 02 · SOBRE ----------------------------------------------- -->
+  <section class="section section--dark" id="sobre">
+    <div class="container grid">
+      <div class="col-4">
+        <p class="eyebrow reveal" data-i18n="home.sobre.eyebrow">Sobre mim</p>
+        <div class="path reveal" role="list" aria-label="Do design gráfico ao produto">
+          <div class="path__step path__step--1" role="listitem">
+            <span class="path__dot" aria-hidden="true"></span>
+            <span>
+              <span class="path__what" data-i18n="home.path.1.t">Design gráfico</span><br>
+              <span class="path__when">2009</span>
+            </span>
+          </div>
+          <div class="path__step path__step--2" role="listitem">
+            <span class="path__dot" aria-hidden="true"></span>
+            <span>
+              <span class="path__what" data-i18n="home.path.2.t">Digital</span><br>
+              <span class="path__when">2014</span>
+            </span>
+          </div>
+          <div class="path__step path__step--3" role="listitem">
+            <span class="path__dot" aria-hidden="true"></span>
+            <span>
+              <span class="path__what" data-i18n="home.path.3.t">Produto</span><br>
+              <span class="path__when">2020</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="measure">
+          <p class="reveal" data-i18n="home.sobre.p1" data-i18n-html>
+            Comecei no Design Gráfico em 2009, migrei para o Digital em 2014, empreendi
+            4 anos na economia criativa e trabalho com produtos digitais desde 2020.
+            Nos últimos 5 anos estive em cadeiras de liderança e produto, conduzindo
+            o <i class="en">roadmap</i> próximo ao negócio durante a escalada de uma startup de 60
+            pessoas para uma empresa de 350, com faturamento de R$ 392 milhões em
+            2025. (<a href="https://www.instagram.com/vaideturbi" target="_blank" rel="noopener">@vaideturbi</a> 💙)
+          </p>
+          <p class="reveal" style="margin-top: var(--s-4)" data-i18n="home.sobre.p2" data-i18n-html>
+            Em produto, meu maior potencial hoje está em estruturar e organizar
+            problemas mal definidos (dores que ninguém sabe direito de quem é) e
+            transformar em hipótese, validação e resultado. Sou forte em <i class="en">discovery</i>
+            contínuo e pesquisa, estratégia e <i class="en">roadmap</i>, priorização orientada a
+            impacto, experimentação, <i class="en">product analytics</i>, métricas de negócio e IA
+            generativa aplicada a jornada e operação.
+          </p>
+          <p class="reveal" style="margin-top: var(--s-4)" data-i18n="home.sobre.p3">
+            Ter o background do design me ajuda a nunca pensar a forma (solução)
+            antes de entender muito bem a função (dor e objetivo), além de trazer
+            ferramentas mais ricas para exercitar empatia e visão de cliente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · EXPERIÊNCIAS (mais recente primeiro) ---------------- -->
+  <section class="section section--beige">
+    <div class="container">
+      <div class="title-row reveal">
+        <h2 data-i18n="home.traj.titulo">Experiências</h2>
+        <span class="tag-row">
+          <a class="tag-link" href="https://www.linkedin.com/in/giselerosa" target="_blank" rel="noopener">
+            <span data-i18n="home.traj.linkedin">ver LinkedIn</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </span>
+      </div>
+
+      <div class="timeline reveal" style="margin-top: var(--s-7)">
+
+        <div class="timeline__item timeline__item--mark">
+          <img class="timeline__logo" src="assets/img/logos/turbi.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+          <p class="timeline__when" data-i18n="home.traj.6.w">2026–hoje</p>
+          <p class="timeline__org">Turbi</p>
+          <p class="timeline__role" data-i18n="home.traj.6.r" data-i18n-html>Product Lead, Customer Journey &amp; Experience</p>
+          <p class="timeline__desc" data-i18n="home.traj.6.d">Criei uma área transversal de jornada do cliente para unificar as dores e levar a voz do cliente para a cultura e para a visão dos times.</p>
+        </div>
+
+        <div class="timeline__item timeline__item--mark">
+          <img class="timeline__logo" src="assets/img/logos/turbi.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+          <p class="timeline__when">2024–2026</p>
+          <p class="timeline__org">Turbi</p>
+          <p class="timeline__role" data-i18n="home.traj.5.r">Senior PM, Growth &amp; Customer Experience</p>
+          <p class="timeline__desc" data-i18n="home.traj.5.d">Assumi o portfólio de Growth e Experiência, com metas de receita, retenção e custo sob a minha responsabilidade pela primeira vez.</p>
+        </div>
+
+        <div class="timeline__item timeline__item--mark">
+          <img class="timeline__logo" src="assets/img/logos/turbi.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+          <p class="timeline__when">2021–2024</p>
+          <p class="timeline__org">Turbi</p>
+          <p class="timeline__role" data-i18n="home.traj.4.r">PM &amp; Head of Product Design</p>
+          <p class="timeline__desc" data-i18n="home.traj.4.d">Única pessoa de produto de 3 squads e líder de um time de 9, gerenciando o backlog numa fase de crescimento agressivo.</p>
+        </div>
+
+        <div class="timeline__item">
+          <img class="timeline__logo" src="assets/img/logos/martin-luz.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+          <p class="timeline__when">2020–2021</p>
+          <p class="timeline__org">Martin Luz</p>
+          <p class="timeline__role" data-i18n="home.traj.3.r">Head de UX &amp; Tecnologia</p>
+          <p class="timeline__desc" data-i18n="home.traj.3.d">Liderei as frentes de UX e tecnologia em projetos de transformação digital e inovação, do banking ao e-commerce.</p>
+        </div>
+
+        <div class="timeline__item">
+          <img class="timeline__logo" src="assets/img/logos/lobo.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+          <p class="timeline__when">2016–2019</p>
+          <p class="timeline__org">Lobo Centro Criativo</p>
+          <p class="timeline__role" data-i18n="home.traj.2.r">Co-fundadora, Negócio e Produto</p>
+          <p class="timeline__desc" data-i18n="home.traj.2.d">Fundei e operei um centro criativo com projetos colaborativos, fomentando cultura e educação com eventos de economia criativa.</p>
+        </div>
+
+        <div class="timeline__item">
+          <span class="logo-stack">
+            <img class="timeline__logo" src="assets/img/logos/activa-design.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+            <img class="timeline__logo" src="assets/img/logos/lampada-ag.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+            <img class="timeline__logo" src="assets/img/logos/coracao.webp" width="176" height="176" alt="" loading="lazy" decoding="async">
+          </span>
+          <p class="timeline__when">2009–2016</p>
+          <p class="timeline__org" data-i18n="home.traj.1.o">Agências e estúdios</p>
+          <p class="timeline__role" data-i18n="home.traj.1.r">De assistente de arte a diretora criativa</p>
+          <p class="timeline__desc" data-i18n="home.traj.1.d">Sete anos em comunicação, branding e mídias digitais, atendendo marcas como Toyota, Samsung, TIM, Meta e ANBIMA.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · CASES ----------------------------------------------- -->
+  <section class="section section--light" id="cases">
+    <div class="container">
+      <h2 class="reveal" style="max-width: 22ch" data-i18n="home.cases.titulo">Alguns cases realizados</h2>
+
+      <div class="case-grid" style="margin-top: var(--s-7)">
+
+        <a class="case-tile reveal" href="cases/assinatura.html">
+          <span class="case-tile__media">
+    <svg class="illo" width="400" height="280" viewBox="0 0 400 280" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(-5.8 -22.5) scale(1.029)">
+              <path class="illo__draw" pathLength="1" d="M81.8 196.5 L96.5 205.0 L96.5 222.0 L81.8 213.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:120ms"/>
+                <path class="illo__draw" pathLength="1" d="M111.2 196.5 L96.5 205.0 L96.5 222.0 L111.2 213.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:180ms"/>
+                <path class="illo__draw" pathLength="1" d="M96.5 188.0 L111.2 196.5 L96.5 205.0 L81.8 196.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:0ms"/>
+                <path class="illo__guide" d="M96.5 188.0 L96.5 205.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:360ms"/>
+                <path class="illo__guide" d="M96.5 205.0 L111.2 213.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:360ms"/>
+                <path class="illo__guide" d="M96.5 205.0 L81.8 213.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:360ms"/>
+                <path class="illo__draw" pathLength="1" d="M141.1 171.0 L170.5 188.0 L170.5 222.0 L141.1 205.0 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:270ms"/>
+                <path class="illo__draw" pathLength="1" d="M199.9 171.0 L170.5 188.0 L170.5 222.0 L199.9 205.0 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:330ms"/>
+                <path class="illo__draw" pathLength="1" d="M170.5 154.0 L199.9 171.0 L170.5 188.0 L141.1 171.0 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:150ms"/>
+                <path class="illo__guide" d="M185.2 162.5 L155.8 179.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:470ms"/>
+                <path class="illo__guide" d="M155.8 162.5 L185.2 179.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:470ms"/>
+                <path class="illo__guide" d="M170.5 154.0 L170.5 188.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:510ms"/>
+                <path class="illo__guide" d="M170.5 188.0 L199.9 205.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:510ms"/>
+                <path class="illo__guide" d="M170.5 188.0 L141.1 205.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:510ms"/>
+                <path class="illo__fill" d="M274.0 120.0 L318.2 145.5 L274.0 171.0 L229.8 145.5 Z" fill="var(--illo-accent-2)" style="--d:720ms"/>
+                <path class="illo__draw" pathLength="1" d="M229.8 145.5 L274.0 171.0 L274.0 222.0 L229.8 196.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:420ms"/>
+                <path class="illo__draw" pathLength="1" d="M318.2 145.5 L274.0 171.0 L274.0 222.0 L318.2 196.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:480ms"/>
+                <path class="illo__draw" pathLength="1" d="M274.0 120.0 L318.2 145.5 L274.0 171.0 L229.8 145.5 Z" stroke="var(--illo-line)" stroke-width="1.07" stroke-linejoin="round" stroke-linecap="round" style="--d:300ms"/>
+                <path class="illo__guide" d="M274.0 120.0 L274.0 171.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:660ms"/>
+                <path class="illo__guide" d="M274.0 171.0 L318.2 196.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:660ms"/>
+                <path class="illo__guide" d="M274.0 171.0 L229.8 196.5" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="2.9 3.9" style="--d:660ms"/>
+                <path class="illo__guide" d="M274.0 92.8 L318.2 118.3 L274.0 143.8 L229.8 118.3 Z" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="3.9 4.9" style="--d:720ms"/>
+                <path class="illo__guide" d="M229.8 118.3 L274.0 143.8 L274.0 171.0 L229.8 145.5 Z" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="3.9 4.9" style="--d:720ms"/>
+                <path class="illo__guide" d="M318.2 118.3 L274.0 143.8 L274.0 171.0 L318.2 145.5 Z" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="3.9 4.9" style="--d:720ms"/>
+                <path class="illo__guide" d="M28.0 223.0 L372.0 223.0" stroke="var(--illo-guide)" stroke-width="0.97" stroke-dasharray="1.9 5.8" style="--d:60ms"/>
+                <circle class="illo__dot" cx="96.5" cy="196.5" r="4.37" fill="var(--illo-accent)" style="--d:560ms"/>
+              </g>
+            </svg>
+          </span>
+          <span class="case-tile__body">
+            <span class="case-tile__num">2022–2024</span>
+            <span class="case-tile__title" data-i18n="home.case3.titulo">Assinatura flexível: do MVP até a comprovação da proposta de valor</span>
+            <span class="case-tile__desc" data-i18n="home.case3.desc">
+              Três anos de experimentação, validação e expansão, da validação de
+              demanda inicial até a formatação oficial do produto.
+            </span>
+            <span class="case-tile__foot">
+              <span data-i18n="home.case.ver">Ver o case</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </span>
+          </span>
+        </a>
+
+
+        <a class="case-tile reveal" href="cases/vencimento.html">
+          <span class="case-tile__media">
+    <svg class="illo" width="400" height="280" viewBox="0 0 400 280" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(-63.8 -99.5) scale(1.319)">
+              <path class="illo__draw" pathLength="1" d="M200.0 158.0 L290.9 210.5 L200.0 263.0 L109.1 210.5 Z" stroke="var(--illo-line)" stroke-width="0.83" stroke-linejoin="round" stroke-linecap="round" style="--d:0ms"/>
+                <path class="illo__guide" d="M218.2 168.5 L127.3 221.0" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M181.8 168.5 L272.7 221.0" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M236.4 179.0 L145.4 231.5" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M163.6 179.0 L254.6 231.5" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M254.6 189.5 L163.6 242.0" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M145.4 189.5 L236.4 242.0" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M272.7 200.0 L181.8 252.5" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__guide" d="M127.3 200.0 L218.2 252.5" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.0" style="--d:200ms"/>
+                <path class="illo__fill" d="M236.4 200.0 L254.6 210.5 L236.4 221.0 L218.2 210.5 Z" fill="var(--illo-accent)" style="--d:600ms"/>
+                <path class="illo__draw" pathLength="1" d="M236.4 200.0 L254.6 210.5 L236.4 221.0 L218.2 210.5 Z" stroke="var(--illo-line)" stroke-width="0.83" stroke-linejoin="round" stroke-linecap="round" style="--d:480ms"/>
+                <path class="illo__fill" d="M187.3 123.3 L240.0 153.8 L240.0 123.4 L187.3 92.9 Z" fill="var(--illo-accent-2)" style="--d:820ms"/>
+                <path class="illo__draw" pathLength="1" d="M187.3 123.3 L240.0 153.8 L240.0 123.4 L187.3 92.9 Z" stroke="var(--illo-line)" stroke-width="0.83" stroke-linejoin="round" stroke-linecap="round" style="--d:760ms"/>
+                <path class="illo__fill" d="M190.0 124.9 L204.5 133.3 L190.9 139.3 Z" fill="var(--illo-accent-2)" style="--d:860ms"/>
+                <path class="illo__draw" pathLength="1" d="M190.0 124.9 L204.5 133.3 L190.9 139.3 Z" stroke="var(--illo-line)" stroke-width="0.83" stroke-linejoin="round" stroke-linecap="round" style="--d:820ms"/>
+                <path class="illo__draw" pathLength="1" d="M194.2 121.0 L233.1 143.5 L233.1 125.7 L194.2 103.2 Z" stroke="var(--illo-line)" stroke-width="0.68" stroke-linejoin="round" stroke-linecap="round" style="--d:940ms"/>
+                <path class="illo__draw" pathLength="1" d="M203.9 126.7 L203.9 108.8" stroke="var(--illo-line)" stroke-width="0.53" stroke-linejoin="round" stroke-linecap="round" style="--d:1040ms"/>
+                <path class="illo__draw" pathLength="1" d="M213.6 132.3 L213.6 114.4" stroke="var(--illo-line)" stroke-width="0.53" stroke-linejoin="round" stroke-linecap="round" style="--d:1080ms"/>
+                <path class="illo__draw" pathLength="1" d="M223.4 137.9 L223.4 120.0" stroke="var(--illo-line)" stroke-width="0.53" stroke-linejoin="round" stroke-linecap="round" style="--d:1120ms"/>
+                <path class="illo__draw" pathLength="1" d="M194.2 112.1 L233.1 134.6" stroke="var(--illo-line)" stroke-width="0.53" stroke-linejoin="round" stroke-linecap="round" style="--d:1040ms"/>
+                <path class="illo__fill" d="M213.6 132.3 L223.4 137.9 L223.4 129.0 L213.6 123.3 Z" fill="var(--illo-accent)" style="--d:1140ms"/>
+                <path class="illo__draw" pathLength="1" d="M213.6 132.3 L223.4 137.9 L223.4 129.0 L213.6 123.3 Z" stroke="var(--illo-line)" stroke-width="0.68" stroke-linejoin="round" stroke-linecap="round" style="--d:1100ms"/>
+                <path class="illo__guide" d="M218.5 135.1 L236.4 210.5" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.8" style="--d:1220ms"/>
+                <ellipse class="illo__guide" cx="200.0" cy="210.5" rx="104.0" ry="59.8" stroke="var(--illo-guide)" stroke-width="0.76" stroke-dasharray="2.3 3.8" style="--d:1320ms"/>
+              </g>
+            </svg>
+          </span>
+          <span class="case-tile__body">
+            <span class="case-tile__num">2025</span>
+            <span class="case-tile__title" data-i18n="home.case2.titulo">Autosserviço via chatbot: alteração de vencimento da fatura</span>
+            <span class="case-tile__desc" data-i18n="home.case2.desc">
+              Um dos principais motivos de contato da assinatura era a necessidade de
+              adaptar a data de vencimento, para evitar falha de cobrança e atrito na
+              jornada.
+            </span>
+            <span class="case-tile__foot">
+              <span data-i18n="home.case.ver">Ver o case</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </span>
+          </span>
+        </a>
+
+        <a class="case-tile reveal" href="cases/customer-journey.html">
+          <span class="case-tile__media">
+    <svg class="illo" width="400" height="280" viewBox="0 0 400 280" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(-140.7 -127.3) scale(1.704)">
+              <path class="illo__draw" pathLength="1" d="M200.0 100.0 L303.9 160.0 L200.0 220.0 L96.1 160.0 Z" stroke="var(--illo-line)" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round" style="--d:0ms"/>
+                <path class="illo__guide" d="M220.8 112.0 L116.9 172.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M179.2 112.0 L283.1 172.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M241.6 124.0 L137.6 184.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M158.4 124.0 L262.4 184.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M262.4 136.0 L158.4 196.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M137.6 136.0 L241.6 196.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M283.1 148.0 L179.2 208.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__guide" d="M116.9 148.0 L220.8 208.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+                <path class="illo__fill" d="M241.6 148.0 L262.4 160.0 L241.6 172.0 L220.8 160.0 Z" fill="var(--illo-accent-2)" style="--d:300ms"/>
+                <path class="illo__draw" pathLength="1" d="M241.6 148.0 L262.4 160.0 L241.6 172.0 L220.8 160.0 Z" stroke="var(--illo-line)" stroke-width="0.53" stroke-linejoin="round" stroke-linecap="round" style="--d:260ms"/>
+                <path class="illo__guide" d="M116.9 160.0 L116.9 143.2" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:420ms"/>
+                <path class="illo__guide" d="M160.5 158.8 L160.5 113.2" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:480ms"/>
+                <path class="illo__guide" d="M200.0 160.0 L200.0 136.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:540ms"/>
+                <path class="illo__guide" d="M239.5 161.2 L239.5 98.8" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:600ms"/>
+                <path class="illo__guide" d="M283.1 160.0 L283.1 128.8" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:660ms"/>
+                <path class="illo__draw" pathLength="1" d="M116.9 143.2 L160.5 113.2 L200.0 136.0 L239.5 98.8 L283.1 128.8" stroke="var(--illo-line)" stroke-width="0.76" stroke-linejoin="round" stroke-linecap="round" style="--d:520ms"/>
+                <circle class="illo__dot" cx="116.9" cy="143.2" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:880ms"/>
+                <circle class="illo__dot" cx="160.5" cy="113.2" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:950ms"/>
+                <circle class="illo__dot" cx="200.0" cy="136.0" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:1020ms"/>
+                <circle class="illo__dot" cx="239.5" cy="98.8" r="2.93" fill="var(--illo-accent)" style="--d:1090ms"/>
+                <circle class="illo__dot" cx="283.1" cy="128.8" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:1160ms"/>
+              </g>
+            </svg>
+          </span>
+          <span class="case-tile__body">
+            <span class="case-tile__num">2026</span>
+            <span class="case-tile__title" data-i18n="home.case1.titulo">Customer Journey: criação da área e reforço da cultura client first</span>
+            <span class="case-tile__desc" data-i18n="home.case1.desc">
+              O convite para criar uma área que cuidasse da jornada do cliente vinha
+              com uma dor latente: os indicadores de experiência estavam despencando
+              e as dores não tinham dono.
+            </span>
+            <span class="case-tile__foot">
+              <span data-i18n="home.case.ver">Ver o case</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 05 · CONTATO ----------------------------------------------- -->
+<footer class="footer" id="contato">
+  <div class="container">
+    <h2 class="display" style="font-size: var(--t-h1); max-width: 16ch" data-i18n="home.contato.titulo">
+      Bora conversar?
+    </h2>
+
+    <dl class="contacts" style="margin-top: var(--s-8)">
+      <div>
+        <dt data-i18n="home.contato.email">E-mail</dt>
+        <dd><a href="mailto:giii.rosaa@gmail.com">giii.rosaa@gmail.com</a></dd>
+      </div>
+      <div>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/giselerosa" target="_blank" rel="noopener">/in/giselerosa ↗</a></dd>
+      </div>
+      <div>
+        <dt>WhatsApp</dt>
+        <dd><a href="https://wa.me/5511996821571" target="_blank" rel="noopener">+55 11 99682-1571 ↗</a></dd>
+      </div>
+      <div>
+        <dt data-i18n="home.contato.cv">Currículo</dt>
+        <dd><a href="assets/curriculo-gisele-rosa.pdf" target="_blank" rel="noopener"
+               data-i18n="home.contato.cvlink">Baixar em PDF ↓</a></dd>
+      </div>
+    </dl>
+
+    <div class="footer__bottom">
+      <span>© <span data-year></span> Gisele Rosa</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gisele Rosa",
+  "givenName": "Gisele",
+  "jobTitle": "Product Manager Sênior",
+  "email": "mailto:giii.rosaa@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressCountry": "BR" },
+  "sameAs": ["https://www.linkedin.com/in/giselerosa"],
+  "knowsAbout": ["Product Management", "Discovery contínuo", "Customer Journey", "Product analytics", "Design System"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Centro Universitário Belas Artes de São Paulo" },
+    { "@type": "CollegeOrUniversity", "name": "Istituto Europeo di Design" }
+  ]
+}
+</script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/reveal.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.DS_Store
+Thumbs.db
+*.sketch
+*.fig
+node_modules/
+.vscode/
+.idea/
+
+# nada de material bruto da empresa no repositório público
+/_rascunhos/
+/_interno/
+*.xlsx
+*.csv
+
+# material bruto e arquivos de trabalho — NUNCA em repositório público
+/materiais/
+/_extraido/
+/_bundles/
+
+# documentacao de trabalho: cita numero interno, fica fora do repositorio publico
+/docs/
+
+# saidas de sessao e anotacoes de trabalho
+/Claude outputs/
+/_prompts-recraft.md
+/LIMPEZA-DO-HISTORICO.md
+
+# imagens que sairam das paginas e nao devem voltar ao repositorio publico
+assets/img/cj/caso-pendencia.webp
+assets/img/cj/principios-pendencia.webp
+assets/img/cj/fases-implementacao.webp
+assets/img/assinatura/lp-comprar-ou-assinar.webp
+assets/img/assinatura/v0-upsell-1.webp
+assets/img/assinatura/v0-upsell-2.webp
+assets/img/assinatura/v1-1.webp
+assets/img/assinatura/v2-filtros.webp
+assets/img/assinatura/v2-franquia.webp
+assets/img/assinatura/v2-onboarding.webp
+assets/img/assinatura/v3-1.webp
+
+# clone auxiliar, se existir
+/giselerosapm.github.io/
+
+# locks antigos movidos para fora do .git
+/.git-lixo/

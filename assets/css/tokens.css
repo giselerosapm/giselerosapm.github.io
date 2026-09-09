@@ -1,0 +1,143 @@
+/* ============================================================
+   TOKENS — cor, tipografia, espaço, tempo
+   Editar aqui muda o site inteiro. Ver docs/01-design-system.md
+   ============================================================ */
+
+/* --- Fontes locais -----------------------------------------
+   Ginger nos títulos e Open Sauce no texto são fontes
+   comerciais e não estão no Google Fonts.
+
+   COMO ATIVAR: coloque os .woff2 em assets/fonts/ com estes
+   nomes e descomente o bloco abaixo.
+     ginger-regular.woff2
+     ginger-bold.woff2
+     open-sauce-one-regular.woff2
+     open-sauce-one-semibold.woff2
+     open-sauce-one-bold.woff2
+
+   Enquanto estiver comentado, vale o fallback geométrico
+   (Plus Jakarta Sans) e o site não faz request que falha.
+   ------------------------------------------------------------ */
+/*
+@font-face {
+  font-family: 'Ginger';
+  src: url('../fonts/ginger-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ginger';
+  src: url('../fonts/ginger-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sauce One';
+  src: url('../fonts/open-sauce-one-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sauce One';
+  src: url('../fonts/open-sauce-one-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sauce One';
+  src: url('../fonts/open-sauce-one-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+:root {
+  /* ---------- Cor ---------- */
+  --c-white:  #FBFAF7;   /* quase branco, levemente quente */
+  --c-beige:  #F1EDE5;   /* bege claro, para alternar seção */
+  --c-plum:   #33312E;   /* cinza escuro quente (nome mantido por compatibilidade) */
+  --c-orange: #FB4F2B;
+  --c-lime:   #DFEF97;
+
+  /* derivadas — só transparências do escuro/claro, nunca cor nova */
+  --c-plum-70: rgba(51, 49, 46, .82);
+  --c-plum-45: rgba(51, 49, 46, .70);
+  --c-plum-16: rgba(51, 49, 46, .16);
+  --c-plum-08: rgba(51, 49, 46, .07);
+  --c-white-70: rgba(251, 250, 247, .80);
+  --c-white-45: rgba(251, 250, 247, .62);
+  --c-white-16: rgba(251, 250, 247, .18);
+
+  /* papéis — o que o CSS usa no dia a dia */
+  --bg:      var(--c-white);
+  --fg:      var(--c-plum);
+  --fg-mut:  var(--c-plum-70);
+  --fg-fai:  var(--c-plum-45);
+  --rule:    var(--c-plum-16);
+  --accent:  var(--c-orange);
+
+  /* Ilustrações técnicas dos cases */
+  --illo-line:   var(--c-plum);
+  --illo-guide:  rgba(51, 49, 46, .34);
+  --illo-accent:   var(--c-orange);
+  --illo-accent-2: var(--c-lime);
+  --illo-bg:       var(--bg);
+
+  /* ---------- Tipografia ---------- */
+  --font-sans: 'Manrope', 'Open Sauce One', 'Plus Jakarta Sans', 'Inter',
+               ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* títulos */
+  --font-display: 'Ginger', 'Open Sauce One', 'Plus Jakarta Sans',
+               ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --t-display: clamp(2.6rem, 1.2rem + 6.4vw, 7rem);
+  --t-h1:      clamp(2.4rem,  1.4rem + 4.0vw, 4.5rem);
+  --t-h2:      clamp(1.65rem, 1.2rem + 1.8vw, 2.5rem);
+  --t-h3:      clamp(1.2rem,  1.05rem + .6vw, 1.5rem);
+  --t-lead:    clamp(1.15rem, 1.0rem + .7vw, 1.5rem);
+  --t-body:    clamp(1.0625rem, 1.0rem + .25vw, 1.25rem);
+  --t-small:   clamp(.875rem, .85rem + .1vw, .9375rem);
+  --t-label:   clamp(.75rem, .73rem + .1vw, .8125rem);
+  --t-stat:    clamp(3rem, 1.8rem + 4.6vw, 5.5rem);
+
+  /* ---------- Espaço (base 8) ---------- */
+  --s-1: .25rem;  --s-2: .5rem;   --s-3: 1rem;    --s-4: 1.5rem;
+  --s-5: 2rem;    --s-6: 3rem;    --s-7: 4rem;    --s-8: 6rem;
+  --s-9: 8rem;    --s-10: 12rem;
+
+  --gutter:  clamp(1.5rem, 6vw, 7.5rem);
+  --pad-sec: clamp(6rem, 12vh, 12rem);
+  --maxw:    88rem;   /* 1408px */
+  --measure: 62ch;
+
+  /* ---------- Movimento ---------- */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --dur:  .32s;
+
+  /* ---------- Outros ---------- */
+  --radius: 999px;   /* só em chip e botão. Card é reto. */
+  --border: 1px solid var(--rule);
+}
+
+/* Seção escura: inverte os papéis, não os tokens de marca */
+.section--dark,
+.footer,
+.is-dark {
+  --bg:     var(--c-plum);
+  --fg:     var(--c-white);
+  --fg-mut: var(--c-white-70);
+  --fg-fai: var(--c-white-45);
+  --rule:   var(--c-white-16);
+  --accent: var(--c-lime);   /* laranja não se lê bem sobre plum */
+}
+
+.section--beige {
+  --bg: var(--c-beige);
+  --rule: var(--c-plum-16);
+}

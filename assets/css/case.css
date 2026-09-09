@@ -1,0 +1,374 @@
+/* ============================================================
+   PÁGINA DE CASE — só o que é específico do "deck"
+   ============================================================ */
+
+/* Barra de progresso do scroll */
+.progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 110;
+  background: transparent;
+  pointer-events: none;
+}
+.progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--c-orange);
+  transform-origin: left center;
+  transition: width .1s linear;
+}
+
+/* Índice do slide no canto — dá a sensação de deck */
+.slide-index {
+  position: fixed;
+  right: var(--gutter);
+  bottom: var(--s-5);
+  z-index: 90;
+  font-size: var(--t-label);
+  letter-spacing: .12em;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-plum-45);
+  pointer-events: none;
+  transition: color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+.slide-index.is-over-dark { color: var(--c-white-45); }
+.slide-index b { font-weight: 600; color: var(--c-orange); }
+.slide-index.is-over-dark b { color: var(--c-lime); }
+@media (max-width: 700px) { .slide-index { display: none; } }
+
+/* Cabeçalho de slide: eyebrow numerado + título */
+.slide-head { margin-bottom: var(--s-6); }
+.slide-head h2 { max-width: 22ch; }
+
+/* Metadados da capa do case */
+.meta {
+  margin-top: var(--s-7);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
+}
+
+/* TL;DR */
+.tldr { display: grid; gap: var(--s-5); }
+.tldr__row { display: grid; grid-template-columns: 9rem 1fr; gap: var(--s-4); border-top: 1px solid var(--rule); padding-top: var(--s-3); }
+.tldr__row dt { font-size: var(--t-label); letter-spacing: .12em; text-transform: uppercase; color: var(--fg-fai); }
+.tldr__row dd { margin: 0; font-size: var(--t-lead); line-height: 1.4; max-width: 48ch; }
+@media (max-width: 700px) { .tldr__row { grid-template-columns: 1fr; gap: var(--s-2); } }
+
+
+/* Rótulo de bloco dentro de um slide */
+.timeline-label {
+  font-size: var(--t-label);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--fg-fai);
+  margin-bottom: var(--s-3);
+}
+
+/* ------------------------------------------------------------
+   Linha do tempo do case: etapa · data · o que foi feito
+   ------------------------------------------------------------ */
+.case-timeline { display: grid; margin-top: var(--s-5); }
+.ct-item {
+  display: grid;
+  grid-template-columns: 8.5rem 1.25rem minmax(0, 1fr);
+  column-gap: var(--s-4);
+  padding-bottom: var(--s-6);
+}
+.ct-item:last-child { padding-bottom: 0; }
+
+.ct-when {
+  font-size: var(--t-label);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: .2em;
+}
+.ct-rail { position: relative; }
+.ct-rail::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: .4em;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(-50%);
+}
+.ct-rail::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: calc(.4em + 16px);
+  bottom: calc(-1 * var(--s-6));
+  border-left: 1px solid var(--rule);
+  transform: translateX(-50%);
+}
+.ct-item:last-child .ct-rail::after { display: none; }
+
+.ct-what h3 { font-size: var(--t-h3); }
+.ct-what p {
+  margin-top: var(--s-2);
+  font-size: var(--t-small);
+  color: var(--fg-mut);
+  max-width: 60ch;
+}
+
+@media (max-width: 640px) {
+  .ct-item { grid-template-columns: 1.25rem minmax(0, 1fr); row-gap: var(--s-2); padding-bottom: var(--s-5); }
+  .ct-when { grid-column: 2; order: 2; padding-top: 0; }
+  .ct-rail { grid-column: 1; grid-row: 1 / span 3; }
+  .ct-what { grid-column: 2; order: 3; }
+}
+
+/* Variante horizontal: as etapas viram uma régua, lado a lado */
+.case-timeline--h {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-6) var(--s-6);
+}
+.case-timeline--h .ct-item {
+  display: block;
+  position: relative;
+  padding: var(--s-4) 0 0;
+  border-top: 2px solid var(--rule);
+}
+.case-timeline--h .ct-rail { display: none; }
+.case-timeline--h .ct-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: -6px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.case-timeline--h .ct-when { padding-top: 0; }
+.case-timeline--h .ct-what { margin-top: var(--s-2); }
+.case-timeline--h .ct-what p { max-width: none; }
+@media (max-width: 900px) { .case-timeline--h { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .case-timeline--h { grid-template-columns: minmax(0, 1fr); } }
+
+/* ------------------------------------------------------------
+   Lista de definições do produto (infográfico da solução)
+   ------------------------------------------------------------ */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-4) var(--s-6);
+  margin-top: var(--s-6);
+  counter-reset: feat;
+}
+.feature {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: var(--s-3);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+.feature::before {
+  counter-increment: feat;
+  content: counter(feat, decimal-leading-zero);
+  font-size: var(--t-label);
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: .35em;
+}
+.feature h3 { font-size: 1rem; letter-spacing: -.01em; }
+.feature p { margin-top: var(--s-2); font-size: var(--t-small); color: var(--fg-mut); }
+/* os dois trade-offs assumidos ficam marcados, não escondidos */
+.feature--tradeoff::before { color: var(--fg-fai); }
+.feature__tag {
+  display: inline-block;
+  margin-left: .5em;
+  padding: .1em .5em;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: .5625rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--fg-fai);
+  vertical-align: .22em;
+  white-space: nowrap;
+}
+@media (max-width: 760px) { .features { grid-template-columns: minmax(0, 1fr); } }
+
+/* Versão em coluna, para viver ao lado dos achados */
+.features--aside {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+}
+.features--aside .feature { grid-template-columns: 1.9rem minmax(0, 1fr); gap: var(--s-2); }
+.features--aside .feature h3 { font-size: .9375rem; }
+.features--aside .feature p { margin-top: 2px; }
+
+/* ------------------------------------------------------------
+   Galeria de materiais e telas
+   ------------------------------------------------------------ */
+.gallery + .gallery { margin-top: var(--s-8); }
+.gallery__head { margin-bottom: var(--s-5); }
+.gallery__head h3 { font-size: var(--t-h2); letter-spacing: -.02em; }
+.gallery__head p {
+  margin-top: var(--s-2);
+  font-size: var(--t-small);
+  color: var(--fg-mut);
+  max-width: none;
+}
+
+.findings > .finding:first-child { border-top: 0; padding-top: 0; }
+
+/* Sem citação ao lado, os achados viram colunas e param de virar um paredão */
+.findings--cols {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-6) var(--s-6);
+  align-items: start;
+}
+.findings--cols .finding {
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: var(--s-2);
+  border-top: 2px solid var(--rule);
+  padding-top: var(--s-3);
+}
+.findings--cols > .finding:first-child { border-top: 2px solid var(--rule); padding-top: var(--s-3); }
+@media (max-width: 900px) { .findings--cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .findings--cols { grid-template-columns: minmax(0, 1fr); } }
+
+/* No bloco de resultado os rótulos usam a coluna inteira, senão quebram em três
+   linhas curtas e ficam feios. E um corpo menor, porque ali eles são legenda. */
+.section--result .stat__label,
+.section--result .stat__note { max-width: none; }
+.section--result .stat__label { font-size: var(--t-small); }
+
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-5); }
+
+/* Telas de app: grid mesmo, porque a ordem conta a história em sequência.
+   Todas com a mesma largura de coluna e altura proporcional à própria imagem,
+   sem corte. */
+.shots--screens {
+  grid-template-columns: repeat(auto-fill, 252px);
+  justify-content: start;
+  gap: var(--s-6) var(--s-4);
+  align-items: start;
+}
+@media (max-width: 480px) {
+  .shots--screens { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+.shots--screens .figure img { height: auto; object-fit: fill; }
+
+/* Cinco telas na mesma linha: a sequência só conta a história se couber junta */
+.shots--row5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+/* Números empilhados, para viver ao lado de uma lista de achados */
+.stats--stack { grid-template-columns: minmax(0, 1fr); gap: var(--s-6); }
+.shots--row3 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 820px; }
+@media (max-width: 620px) { .shots--row3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .shots--row5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .shots--row5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Materiais de estudo: um embaixo do outro e grandes, porque são quadros
+   densos que só funcionam com largura. */
+.shots--stack {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-7);
+}
+.shots .figure img { background: var(--c-white); }
+.shots figcaption { font-size: var(--t-small); }
+.shots--stack figcaption { max-width: none; }
+
+/* Navegação para o próximo case */
+.next-case {
+  display: block;
+  padding-block: var(--s-8);
+}
+.next-case .eyebrow { color: var(--fg-fai); }
+.next-case__title { font-size: var(--t-h1); transition: color var(--dur) var(--ease); }
+.next-case:hover .next-case__title { color: var(--accent); }
+
+
+/* O bloco de resultado usava altura de tela cheia e destoava do ritmo
+   vertical das outras seções. */
+.section--result { min-height: 0; display: block; }
+
+/* ------------------------------------------------------------
+   Chamada final do case
+   ------------------------------------------------------------ */
+.cta-band { padding-block: var(--s-8); border-top: 1px solid var(--rule); }
+.cta-band__txt {
+  font-family: var(--font-display);
+  font-size: var(--t-h2);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.12;
+  max-width: none;
+}
+@media (max-width: 700px) { .cta-band__txt { font-size: var(--t-h3); } }
+
+/* ------------------------------------------------------------
+   Etapas de estudo: a linha do tempo e os materiais no mesmo bloco.
+   Diferente dos outros cases de propósito, porque aqui a entrega
+   de cada etapa é o próprio material.
+   ------------------------------------------------------------ */
+.study-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-bottom: var(--s-3);
+}
+.study-head__year {
+  font-family: var(--font-display);
+  font-size: var(--t-h1);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  line-height: 1;
+  color: var(--c-plum-08);
+}
+
+.study-steps { display: grid; gap: var(--s-8); margin-top: var(--s-7); }
+.study-step {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: var(--s-5);
+  position: relative;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
+}
+.study-step::before {
+  content: '';
+  position: absolute;
+  left: 0; top: -5px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.study-step__when {
+  font-size: var(--t-label);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.study-step__body h3 { font-size: var(--t-h3); }
+.study-step__body > p {
+  margin-top: var(--s-2);
+  font-size: var(--t-small);
+  color: var(--fg-mut);
+  max-width: 68ch;
+}
+.study-step__shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-6) var(--s-5);
+  margin-top: var(--s-5);
+}
+@media (max-width: 760px) { .study-step__shots { grid-template-columns: minmax(0, 1fr); } }
+.study-step__shots figcaption { max-width: none; }
+
+@media (max-width: 760px) {
+  .study-step { grid-template-columns: minmax(0, 1fr); gap: var(--s-2); }
+  .study-head__year { font-size: var(--t-h2); }
+}

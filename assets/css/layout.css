@@ -1,0 +1,173 @@
+/* ============================================================
+   LAYOUT — container, grid, seções, header, footer
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Grid de 12 colunas. Use .col-* nos filhos. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-5);
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-12 { grid-column: 1 / -1; }
+@media (max-width: 900px) {
+  .col-4, .col-5, .col-6, .col-7, .col-8 { grid-column: 1 / -1; }
+}
+
+/* posição explícita no grid de 12 colunas.
+   Não use inline `grid-column-start`: junto com `grid-column: span N`
+   ele zera o span e a coluna vira 1. */
+.start-7 { grid-column: 7 / span 6; }
+.start-8 { grid-column: 8 / span 5; }
+.start-9 { grid-column: 9 / span 4; }
+@media (max-width: 900px) {
+  .start-7, .start-8, .start-9 { grid-column: 1 / -1; }
+}
+
+.measure { max-width: var(--measure); }
+
+/* ---------- Seção ---------- */
+.section {
+  background: var(--bg);
+  color: var(--fg);
+  padding-block: var(--pad-sec);
+  position: relative;
+}
+
+/* "slide": ocupa a tela e centra verticalmente */
+.section--full {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.section--light { --bg: var(--c-white); }
+
+/* Filete que separa duas seções de mesma cor */
+.section--rule { border-top: 1px solid var(--rule); }
+
+/* ---------- Header ---------- */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  padding-block: var(--s-3);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+  mix-blend-mode: normal;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+.header__brand {
+  font-family: var(--font-display);
+  font-size: clamp(.95rem, .9rem + .25vw, 1.15rem);
+  letter-spacing: -.01em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.header__brand:hover { color: var(--c-orange); }
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(var(--s-3), 2vw, var(--s-5));
+  font-size: var(--t-label);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.header__nav a:hover { color: var(--c-orange); }
+.header__nav a[aria-current="page"] { color: var(--c-orange); }
+
+/* header sobre seção escura */
+.header.is-over-dark { color: var(--c-white); }
+.header.is-over-dark .header__brand:hover,
+.header.is-over-dark .header__nav a:hover { color: var(--c-lime); }
+.header.is-over-dark .lang__btn.is-active { color: var(--c-lime); }
+
+/* fundo do header depois de rolar */
+.header.is-stuck::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--c-white);
+  z-index: -1;
+}
+.header.is-stuck.is-over-dark::before { background: var(--c-plum); }
+
+/* ---------- Toggle de idioma ---------- */
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  font-size: var(--t-label);
+  letter-spacing: .08em;
+}
+.lang__btn {
+  background: none; border: 0; padding: 2px 4px; cursor: pointer;
+  font: inherit; color: inherit; letter-spacing: inherit;
+  text-transform: uppercase; opacity: .45;
+  transition: opacity var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.lang__btn:hover { opacity: 1; }
+.lang__btn.is-active { opacity: 1; color: var(--c-orange); font-weight: 600; }
+.lang__sep { opacity: .3; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--c-plum);
+  color: var(--c-white);
+  padding-block: var(--s-9) var(--s-7);
+}
+.footer a { color: var(--c-white); }
+.footer a:hover { color: var(--c-lime); }
+.footer__bottom {
+  display: flex; flex-wrap: wrap; gap: var(--s-3);
+  justify-content: space-between;
+  margin-top: var(--s-7);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-white-16);
+  font-size: var(--t-small);
+  color: var(--c-white-45);
+}
+
+/* ---------- Header no mobile ---------- */
+@media (max-width: 640px) {
+  .header__nav {
+    gap: var(--s-3);
+    font-size: 11px;
+    letter-spacing: .06em;
+  }
+  .header__brand { font-size: .95rem; }
+  /* links secundários somem: o rodapé e a home já dão o caminho */
+  .header__nav a.is-optional { display: none; }
+  /* dá ar entre o header fixo e o topo do primeiro slide */
+  .section--full { padding-top: calc(var(--pad-sec) + 2rem); }
+}
+
+/* ---------- Revelação no scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .5s var(--ease), transform .5s var(--ease);
+}
+.reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}

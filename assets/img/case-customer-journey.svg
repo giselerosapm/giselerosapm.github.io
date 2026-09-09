@@ -1,0 +1,27 @@
+<svg class="illo" viewBox="0 0 400 280" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>A jornada ponta a ponta, etapa por etapa</title>
+  <g transform="translate(-140.7 -127.3) scale(1.704)">
+  <path class="illo__draw" pathLength="1" d="M200.0 100.0 L303.9 160.0 L200.0 220.0 L96.1 160.0 Z" stroke="var(--illo-line)" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round" style="--d:0ms"/>
+    <path class="illo__guide" d="M220.8 112.0 L116.9 172.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M179.2 112.0 L283.1 172.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M241.6 124.0 L137.6 184.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M158.4 124.0 L262.4 184.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M262.4 136.0 L158.4 196.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M137.6 136.0 L241.6 196.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M283.1 148.0 L179.2 208.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__guide" d="M116.9 148.0 L220.8 208.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:200ms"/>
+    <path class="illo__fill" d="M241.6 148.0 L262.4 160.0 L241.6 172.0 L220.8 160.0 Z" fill="var(--illo-accent-2)" style="--d:300ms"/>
+    <path class="illo__draw" pathLength="1" d="M241.6 148.0 L262.4 160.0 L241.6 172.0 L220.8 160.0 Z" stroke="var(--illo-line)" stroke-width="0.53" stroke-linejoin="round" stroke-linecap="round" style="--d:260ms"/>
+    <path class="illo__guide" d="M116.9 160.0 L116.9 143.2" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:420ms"/>
+    <path class="illo__guide" d="M160.5 158.8 L160.5 113.2" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:480ms"/>
+    <path class="illo__guide" d="M200.0 160.0 L200.0 136.0" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:540ms"/>
+    <path class="illo__guide" d="M239.5 161.2 L239.5 98.8" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:600ms"/>
+    <path class="illo__guide" d="M283.1 160.0 L283.1 128.8" stroke="var(--illo-guide)" stroke-width="0.59" stroke-dasharray="1.8 2.3" style="--d:660ms"/>
+    <path class="illo__draw" pathLength="1" d="M116.9 143.2 L160.5 113.2 L200.0 136.0 L239.5 98.8 L283.1 128.8" stroke="var(--illo-line)" stroke-width="0.76" stroke-linejoin="round" stroke-linecap="round" style="--d:520ms"/>
+    <circle class="illo__dot" cx="116.9" cy="143.2" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:880ms"/>
+    <circle class="illo__dot" cx="160.5" cy="113.2" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:950ms"/>
+    <circle class="illo__dot" cx="200.0" cy="136.0" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:1020ms"/>
+    <circle class="illo__dot" cx="239.5" cy="98.8" r="2.93" fill="var(--illo-accent)" style="--d:1090ms"/>
+    <circle class="illo__dot" cx="283.1" cy="128.8" r="2.11" fill="var(--illo-bg)" stroke="var(--illo-line)" stroke-width="0.65" style="--d:1160ms"/>
+  </g>
+</svg>
