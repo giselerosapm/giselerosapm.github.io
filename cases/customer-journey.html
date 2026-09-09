@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#FBFAF7">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.goatcounter.com; script-src 'self' https://gc.zgo.at; connect-src 'self' https://*.goatcounter.com; base-uri 'self'; form-action 'none'; object-src 'none'">
 
 <title>Customer Journey · Gisele Rosa</title>
 <meta name="description" content="Case de liderança de produto: a criação de uma área transversal de Customer Journey, o método, os estudos e o que mudou no primeiro semestre.">
@@ -445,5 +445,10 @@
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/reveal.js"></script>
 <script src="../assets/js/main.js"></script>
+
+<!-- Analytics sem cookie e sem dado pessoal (GoatCounter).
+     Trocar o código em data-goatcounter se o subdomínio for outro. -->
+<script data-goatcounter="https://giselerosapm.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
